@@ -1,0 +1,150 @@
+@import "colors.rasi"
+
+* {
+    font:               "Google Sans Flex 14";
+    background-color:   transparent;
+    text-color:         @on-surface;
+    margin:             0;
+    padding:            0;
+    spacing:            0;
+}
+
+/* The window itself is invisible: only the three connected cards show */
+window {
+    transparency:       "real";
+    location:           south;
+    anchor:             south;
+    y-offset:           -32px;
+    width:              560px;
+    background-color:   transparent;
+    border:             0;
+    padding:            0;
+}
+
+/* 4px gap between cards = the "connected" look */
+mainbox {
+    spacing:            4px;
+    children:           [ message, listview, inputbar ];
+}
+
+/* ── Results card: big radius on top, tiny radius where it meets the next card ── */
+listview {
+    background-color:   @surface-container;
+    border-radius:      36px 36px 8px 8px;
+    padding:            12px;
+    lines:              8;
+    columns:            1;
+    spacing:            4px;
+    reverse:            true;       /* best match sits right above the search bar */
+    fixed-height:       false;      /* card shrinks/grows upward as you type */
+    dynamic:            true;
+    scrollbar:          false;
+    cycle:              true;
+}
+
+element {
+    padding:            10px 16px;
+    spacing:            16px;
+    border-radius:      20px;
+    cursor:             pointer;
+}
+
+element normal.normal,
+element alternate.normal {
+    background-color:   transparent;
+    text-color:         @on-surface;
+}
+
+/* Selected item morphs to a full pill */
+element selected.normal {
+    background-color:   @secondary-container;
+    text-color:         @on-secondary-container;
+    border-radius:      100px;
+}
+
+element selected.active {
+    background-color:   @primary-container;
+    text-color:         @on-primary-container;
+    border-radius:      100px;
+}
+
+element selected.urgent {
+    background-color:   @error;
+    text-color:         @on-error;
+    border-radius:      100px;
+}
+
+element-icon {
+    size:               36px;
+    vertical-align:     0.5;
+}
+
+element-text {
+    vertical-align:     0.5;
+    text-color:         inherit;
+}
+
+/* ── Mode switcher: connected button group, selected one becomes a pill ── */
+mode-switcher {
+    spacing:            4px;
+    background-color:   transparent;
+}
+
+button {
+    padding:            12px 20px;
+    border-radius:      8px;
+    background-color:   @surface-container-high;
+    text-color:         @on-surface-variant;
+    horizontal-align:   0.5;
+    cursor:             pointer;
+}
+
+button selected {
+    background-color:   @primary;
+    text-color:         @on-primary;
+    border-radius:      100px;
+}
+
+/* ── Search card: small radius on top, big radius on the bottom ── */
+inputbar {
+    background-color:   @surface-container-high;
+    border-radius:      8px 8px 36px 36px;
+    padding:            10px 10px 10px 22px;
+    spacing:            14px;
+    children:           [ textbox-search, entry, prompt ];
+}
+
+textbox-search {
+    expand:             false;
+    str:                "search";
+    font:               "Material Symbols Rounded 22";
+    text-color:         @on-surface-variant;
+    vertical-align:     0.5;
+}
+
+entry {
+    placeholder:        "Search apps, run commands...";
+    placeholder-color:  @on-surface-variant;
+    cursor-color:       @primary;
+    vertical-align:     0.5;
+}
+
+/* Current mode shown as a tonal chip on the right */
+prompt {
+    background-color:   @primary-container;
+    text-color:         @on-primary-container;
+    border-radius:      100px;
+    padding:            10px 18px;
+    font:               "Google Sans Flex Bold 12";
+}
+
+/* ── Messages / errors ── */
+message {
+    background-color:   @tertiary-container;
+    border-radius:      28px 28px 8px 8px;
+    padding:            12px 18px;
+}
+
+textbox {
+    text-color:         @on-tertiary-container;
+}

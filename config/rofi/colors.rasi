@@ -1,0 +1,16 @@
+* {
+    surface-container:          #202018;
+    surface-container-high:     #2b2a22;
+    on-surface:                 #e6e3d5;
+    on-surface-variant:         #c9c7b6;
+    primary:                    #cbcb77;
+    on-primary:                 #323200;
+    primary-container:          #494a00;
+    on-primary-container:       #e7e790;
+    secondary-container:        #48482d;
+    on-secondary-container:     #e6e4bf;
+    tertiary-container:         #254e40;
+    on-tertiary-container:      #bfecd9;
+    error:                      #ffb4ab;
+    on-error:                   #690005;
+}

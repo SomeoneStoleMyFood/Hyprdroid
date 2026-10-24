@@ -1,0 +1,246 @@
+{
+  "bar": {
+    "heightPercent": 3,
+    "minHeight": 22,
+    "maxHeight": 56,
+    "iconScale": 0.55,
+    "use24h": true,
+    "font": "Google Sans Flex",
+    "scrim": true,
+    "scrimOpacity": 0.45,
+    "hideOnFullscreen": true,
+    "hoverStrip": 3,
+    "maxNotifIcons": 5,
+    "monoNotifIcons": false,
+    "clockFont": "DynaPuff",
+    "clockBold": true
+  },
+  "icons": {
+    "showWifiOff": true,
+    "showWifiDisconnected": true,
+    "showBluetoothOff": true,
+    "airplaneWhenAllOff": true,
+    "fonts": [
+      "Material Symbols Rounded",
+      "Material Symbols Outlined",
+      "Material Symbols Sharp",
+      "Material Icons Round",
+      "Material Icons Outlined",
+      "Material Icons"
+    ]
+  },
+  "network": {
+    "pollSeconds": 6
+  },
+  "shade": {
+    "enabled": true,
+    "screen": "focused",
+    "swipeThresholdPx": 16,
+    "openFraction": 0.3,
+    "swipeDistanceFraction": 0.45,
+    "animationMs": 450,
+    "radius": 36,
+    "tiles": [
+      "wifi",
+      "bluetooth",
+      "dnd",
+      "saver",
+      "airplane",
+      "mute",
+      "mic"
+    ],
+    "customTiles": [
+      {
+        "label": "Screenshot",
+        "icon": "camera",
+        "command": [
+          "sh",
+          "-c",
+          "grim -g \"$(slurp)\" - | wl-copy"
+        ]
+      }
+    ],
+    "closeAnimationMs": 280,
+    "backgroundOpacity": 1.0,
+    "maxWidth": 0,
+    "showVolume": true,
+    "sideMargin": 56,
+    "dimOtherScreens": 0.75,
+    "powerMenu": [
+      {
+        "label": "Lock",
+        "icon": "lock",
+        "command": [
+          "qs",
+          "ipc",
+          "call",
+          "lock",
+          "lock"
+        ]
+      },
+      {
+        "label": "Sleep",
+        "icon": "sleep",
+        "command": [
+          "systemctl",
+          "suspend"
+        ]
+      },
+      {
+        "label": "Restart",
+        "icon": "restart",
+        "command": [
+          "systemctl",
+          "reboot"
+        ]
+      },
+      {
+        "label": "Power off",
+        "icon": "power",
+        "command": [
+          "systemctl",
+          "poweroff"
+        ],
+        "danger": true
+      },
+      {
+        "label": "Log out",
+        "icon": "logout",
+        "command": [
+          "hyprctl",
+          "dispatch",
+          "exit"
+        ]
+      }
+    ],
+    "widgets": [
+      "alarm",
+      "timer",
+      "weather",
+      "system"
+    ]
+  },
+  "toasts": {
+    "enabled": true,
+    "screen": "main",
+    "timeoutMs": 6000,
+    "width": 400,
+    "maxVisible": 3,
+    "radius": 26,
+    "topMarginPx": 8,
+    "showInDnd": false,
+    "criticalIgnoresDnd": true
+  },
+  "startup": {
+    "video": "start.mp4",
+    "volume": 1.0,
+    "mainMonitor": "",
+    "playOnLaunch": false
+  },
+  "weather": {
+    "city": "kyzylorda",
+    "units": "m"
+  },
+  "lock": {
+    "avatar": "",
+    "name": "",
+    "allowIpcUnlock": false,
+    "showMedia": true,
+    "checkCommand": "",
+    "tintMinutes": true,
+    "avatarShape": "cookie"
+  },
+  "effects": {
+    "speed": 1,
+    "turbulence": 1,
+    "size": 1,
+    "opacity": 1,
+    "layer": "overlay",
+    "screens": "all",
+    "snow": {
+      "count": 120,
+      "wind": 8
+    },
+    "sakura": {
+      "count": 60,
+      "wind": 25
+    },
+    "leaves": {
+      "count": 45,
+      "wind": 30
+    },
+    "rain": {
+      "count": 220,
+      "wind": 40
+    },
+    "weather": {
+      "enabled": true,
+      "intensityWords": true,
+      "rules": [
+        {
+          "match": "snow|blizzard|sleet|ice pellets|freezing",
+          "effect": "snow"
+        },
+        {
+          "match": "thunder|rain|drizzle|shower",
+          "effect": "rain"
+        },
+        {
+          "match": "sunny|clear|cloud|overcast|fog|mist",
+          "effect": "leaves",
+          "months": [
+            9,
+            10,
+            11
+          ],
+          "intensity": 0.5
+        },
+        {
+          "match": "sunny|clear|partly",
+          "effect": "sakura",
+          "months": [
+            4,
+            5
+          ],
+          "intensity": 0.7
+        }
+      ]
+    }
+  },
+  "colors": {
+    "file": "~/.config/quickshell/colors.json"
+  },
+  "stickers": {
+    "folder": "~/Pictures/Stickers"
+  },
+  "island": {
+    "enabled": true,
+    "color": "#2f344d",
+    "topOffset": 0,
+    "media": true,
+    "timer": true,
+    "volume": true,
+    "charging": true,
+    "notifications": true,
+    "cava": true,
+    "placement": "bar"
+  },
+  "pet": {
+    "enabled": false,
+    "name": "Moisey",
+    "color": "#F0A04B",
+    "size": 140,
+    "layer": "top",
+    "idleMinutes": 15,
+    "decayPerHour": {
+      "hunger": 8,
+      "thirst": 12,
+      "mood": 6
+    },
+    "x": 0.85,
+    "bottomMargin": 0,
+    "flip": false,
+    "wakeMs": 1900,
+    "screen": "main"
+  }
+}

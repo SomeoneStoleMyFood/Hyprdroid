@@ -1,0 +1,15 @@
+[config]
+show_color = false
+
+[templates.kitty]
+input_path  = "~/.config/matugen/templates/kitty-colors.conf"
+output_path = "~/.config/kitty/colors.conf"
+post_hook   = "pkill -USR1 kitty"
+
+[templates.rofi]
+input_path = '~/.config/matugen/templates/rofi-colors.rasi'
+output_path = '~/.config/rofi/colors.rasi'
+
+[templates.theme]
+input_path = '~/.config/quickshell/colors.template.json'
+output_path = '~/.config/quickshell/colors.json'

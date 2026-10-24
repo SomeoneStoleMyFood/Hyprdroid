@@ -1,0 +1,21 @@
+{
+  "fg": "#FFFFFF",
+  "fgDim": "#B3FFFFFF",
+  "track": "#59FFFFFF",
+  "text": "#FFFFFF",
+  "onTileActive": "#FFFFFF",
+  "onPrimaryContainer": "#FFFFFF",
+  "saver": "#F9D66F",
+  "privacyGreen": "#6DD58C",
+  "privacyInk": "#00391A",
+  "warn": "#ffb4ab",
+  "surface": "#14140c",
+  "container": "#202018",
+  "containerHigh": "#2b2a22",
+  "onSurface": "#FFFFFF",
+  "onSurfaceVar": "#FFFFFF",
+  "primary": "#cbcb77",
+  "onPrimary": "#323200",
+  "primaryContainer": "#494a00",
+  "tileActive": "#494a00"
+}

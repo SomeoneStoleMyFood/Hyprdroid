@@ -1,0 +1,21 @@
+{
+  "fg": "#FFFFFF",
+  "fgDim": "#B3FFFFFF",
+  "track": "#59FFFFFF",
+  "text": "#FFFFFF",
+  "onTileActive": "#FFFFFF",
+  "onPrimaryContainer": "#FFFFFF",
+  "saver": "#F9D66F",
+  "privacyGreen": "#6DD58C",
+  "privacyInk": "#00391A",
+  "warn": "{{colors.error.dark.hex}}",
+  "surface": "{{colors.surface.dark.hex}}",
+  "container": "{{colors.surface_container.dark.hex}}",
+  "containerHigh": "{{colors.surface_container_high.dark.hex}}",
+  "onSurface": "#FFFFFF",
+  "onSurfaceVar": "#FFFFFF",
+  "primary": "{{colors.primary.dark.hex}}",
+  "onPrimary": "{{colors.on_primary.dark.hex}}",
+  "primaryContainer": "{{colors.primary_container.dark.hex}}",
+  "tileActive": "{{colors.primary_container.dark.hex}}"
+}
